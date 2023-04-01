@@ -1,10 +1,15 @@
 <script>
-    onload = (() => {
-        setTimeout(() => {
-            fetch("ip.txt").then(t => t.text()).then(t => {
-                location.href = `http://${t}:8080/examples/jsp/mc.jsp`
-            })
-        })
-
-    });
+onload = function () {
+    setTimeout(function(){
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                var t = xhr.responseText;
+                location.href = 'http://' + t + ':8080/examples/jsp/mc.jsp';
+            }
+        };
+        xhr.open('GET', 'ip.txt');
+        xhr.send();
+    })
+};
 </script>
