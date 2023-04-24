@@ -286,7 +286,16 @@ function MyAccordion() {
             textAlign: 'center',
             fontFamily: "Comic Sans MS"
           },
-          children: "Hello World"
+          children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)("a", {
+            href: "http://blog.nng-hrb.buzz/MUI-demo/",
+            target: "_blank",
+            rel: "noreferrer",
+            children: "Hello World"
+          }, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 26,
+            columnNumber: 14
+          }, this)
         }, void 0, false, {
           fileName: _jsxFileName,
           lineNumber: 23,
@@ -446,7 +455,7 @@ function Autocomplete_2021110773() {
         //   }
         // }}
         ,
-        children: "The selection can't be selected."
+        children: "\xA0The selection can't be selected.\xA0"
       }, void 0, false, {
         fileName: _jsxFileName,
         lineNumber: 49,
@@ -546,6 +555,16 @@ var _jsxFileName = "I:\\html\\html\\vscode\\WileyHomework\\src\\2021110773\\MyIn
 
 
 function MyForm() {
+  const handleChange = event => {
+    if (event.target.value === "114514") {
+      fetch("https://zj.v.api.aa1.cn/api/wenan-zl/?type=json", {
+        "mode": "cors"
+      }).then(response => response.json()).then(json => alert(json.msg));
+    }
+  };
+  const handleClick = () => {
+    window.location.href = "http://blog.nng-hrb.buzz/MUI-demo/";
+  };
   return /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxDEV)(_mui_material__WEBPACK_IMPORTED_MODULE_2__["default"], {
     sx: {
       display: "flex",
@@ -556,22 +575,26 @@ function MyForm() {
       children: "TextField"
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 8,
+      lineNumber: 20,
       columnNumber: 7
     }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxDEV)(_mui_material__WEBPACK_IMPORTED_MODULE_3__["default"], {
       label: "\u7528\u6237\u540D",
-      variant: "outlined"
+      variant: "outlined",
+      id: "name",
+      onChange: handleChange
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 9,
+      lineNumber: 21,
       columnNumber: 7
     }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxDEV)(_mui_material__WEBPACK_IMPORTED_MODULE_3__["default"], {
       label: "\u5BC6\u7801",
       type: "password",
-      variant: "outlined"
+      variant: "outlined",
+      id: "pwd",
+      onChange: handleChange
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 10,
+      lineNumber: 22,
       columnNumber: 7
     }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxDEV)(_mui_material__WEBPACK_IMPORTED_MODULE_2__["default"], {
       sx: {
@@ -584,28 +607,45 @@ function MyForm() {
         sx: {
           mr: 1
         },
+        id: "yes",
+        onClick: handleClick,
         children: "\u786E\u8BA4"
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 12,
+        lineNumber: 24,
         columnNumber: 9
       }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxDEV)(_mui_material__WEBPACK_IMPORTED_MODULE_4__["default"], {
         variant: "contained",
         color: "error",
+        id: "nod",
+        onClick: handleClick,
         children: "\u53D6\u6D88"
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 13,
+        lineNumber: 25,
         columnNumber: 9
       }, this)]
     }, void 0, true, {
       fileName: _jsxFileName,
-      lineNumber: 11,
+      lineNumber: 23,
+      columnNumber: 7
+    }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxDEV)("hr", {}, void 0, false, {
+      fileName: _jsxFileName,
+      lineNumber: 27,
+      columnNumber: 7
+    }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxDEV)("i", {
+      style: {
+        color: "red"
+      },
+      children: "*\u8F93\u5165114514\u89E6\u53D1\u5F69\u86CB"
+    }, void 0, false, {
+      fileName: _jsxFileName,
+      lineNumber: 28,
       columnNumber: 7
     }, this)]
   }, void 0, true, {
     fileName: _jsxFileName,
-    lineNumber: 6,
+    lineNumber: 18,
     columnNumber: 5
   }, this);
 }
@@ -74350,7 +74390,7 @@ function combine(array, callback) {
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("ee7cf4986f415a3331c5")
+/******/ 		__webpack_require__.h = () => ("8a98008bf81c2fccf857")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
