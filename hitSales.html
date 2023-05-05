@@ -1,0 +1,15 @@
+<script>
+onload = function () {
+    setTimeout(function(){
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                var t = xhr.responseText;
+                location.href = 'http://' + t + ':8080/hit-1.0-SNAPSHOT/login1.jsp';
+            }
+        };
+        xhr.open('GET', 'ip.txt');
+        xhr.send();
+    })
+};
+</script>
