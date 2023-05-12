@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <style>
+    * {
+      text-align: center;
+    }
+    p {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- <script src="fetch.js"></script> -->
+  <script>
+    onload = () => {
+      function ff(x, text) {
+        if (parseFloat(x) < 17) {
+          document.write(`<p style="color:red">${x + text}</p>`)
+        } else if (parseFloat(x) > 20) {
+          document.write(`<p style="color:blue">${x + text}</p>`)
+        } else {
+          document.write(`<p>${x + text}</p>`)
+        }
+      }
+      async function f(url, zz, text, headers) {
+        try {
+          const response = await fetch(url);
+          const html = await response.text();
+          ff(zz.exec(html)[1], text);
+        } catch (e) {
+          console.log(e + '\x1b[42m%s\x1b[0m', text)
+        }
+      }
+      async function f_(url, zz, text1, text2, a, b, f = 1) {
+        try {
+          const options = {
+            method: f ? 'GET' : 'POST',
+            
+          };
+          if (!f) {
+            options.body = JSON.stringify({ areaid: 101050115 });
+          }
+          const response = await fetch(url, options);
+          const html = await response.text();
+          const matches = html.match(new RegExp(zz, 'g'));
+          ff(zz.exec(matches[a])[1], text1);
+          zz.exec(matches[b])
+          ff(zz.exec(matches[b])[1], text2);
+        } catch (e) {
+          console.log(e + '\x1b[42m%s\x1b[0m', text1)
+        }
+      }
+      async function f__(url, zz, text1, text2, text3, a, b, c, f = 1) {
+        try {
+          const options = {
+            method: f ? 'GET' : 'POST',
+          };
+          if (!f) {
+            options.body = JSON.stringify({ cityId: 284767, cityType: 0 });
+          }
+          const response = await fetch(url, options);
+          const html = await response.text();
+          const matches = html.match(new RegExp(zz, 'g'));
+          ff(zz.exec(matches[a])[1], text1);
+          zz.exec(matches[b])
+          ff(zz.exec(matches[b])[1], text2);
+          zz.exec(matches[c])
+          ff(zz.exec(matches[c])[1], text3);
+        } catch (e) {
+          console.log(e + '\x1b[42m%s\x1b[0m', text1)
+        }
+      }
+      async function f___(url, zz, text1, text2, text3, text4, a, b, c, d) {
+        try {
+          const response = await fetch(url);
+          const html = await response.text();
+          const matches = html.match(new RegExp(zz, 'g'));
+          ff(zz.exec(matches[a])[1], text1);
+          zz.exec(matches[b])
+          ff(zz.exec(matches[b])[1], text2);
+          zz.exec(matches[c])
+          ff(zz.exec(matches[c])[1], text3);
+          zz.exec(matches[d])
+          ff(zz.exec(matches[d])[1], text4);
+        } catch (e) {
+          console.log(e + '\x1b[42m%s\x1b[0m', text1)
+        }
+      }
+      const url4 = "http://www.nmc.cn/rest/weather?stationid=50953"
+      const url8 = "https://devapi.qweather.com/v7/weather/now?key=a91212c50f7041b9a9c68ea15874dbcc&location=101050115"
+      const url12 = "https://rss.weather.com.cn/api/v1/obs/1h?lat=45.743663&lng=126.631248&type=obs1h"
+      const url13 = "http://nanning.welife100.com/PIndex/getnnIndexdata?areaid=101050115"
+      const url16 = "https://openweathermap.org/data/2.5/weather?id=2037013&appid=439d4b804bc8187953eb36d2a8c26a02"
+      const url17 = "https://www.tianqiapi.com/free/day?appid=56761788&appsecret=ti3hP8y9&city=%E5%8D%97%E5%B2%97"
+      const url18 = "https://restapi.amap.com/v3/weather/weatherInfo?key=bb2729228cb4b74134910bfb25bc4a3f&city=230103"
+      const url20 = "http://weather.123.duba.net/static/weather_info/101050115.html"
+      const url22 = "http://api.help.bj.cn/apis/weather/?id=101050115"
+      const url23 = "https://api.msn.cn/weatherfalcon/weather/overview?cuthour=true&days=1&lat=45.760101318359375&lon=126.66900634765625&locale=zh-cn"
+      const url33 = "https://v.api.aa1.cn/api/api-tianqi-4/?id=101050115"
+      const url34 = "https://cloud-rest.lenovomm.com/cloud-weather/weather/weatherInfo"
+      const url36 = "http://m.chinaso.com/v5/general/v1/public/weather?code=230100"
+      const url39 = "https://h5ctywhr.api.moji.com/weatherDetail"
+      const url41 = "https://yiketianqi.com/api?version=v1&city=%E5%8D%97%E5%B2%97&appid=85841439&appsecret=EKCDLT4I"
+      const url42 = "https://api.seniverse.com/v3/weather/now.json?key=SCYrvkytJze9qyzOh&location=haerbin"
+      const url43 = "https://www.mxnzp.com/api/weather/current/%E5%8D%97%E5%B2%97%E5%8C%BA?app_id=eklrnkhmiltpfsux&app_secret=eTgyT3hERzBGSzZsSmVCalRBNVdHQT09";
+      document.write('<style>*{text-align:center;font-size:120%}</style>');
+      (async function () {
+        const tasks = [
+          f__(url4, /[ft]e.{4,9}":(.*?)[},]/g, '  哈尔滨nmc', '  (体感)哈尔滨nmc', '  (小时)哈尔滨nmc', 0, 1, 17),
+          f(url12, /:"(.*?)"/g, '  哈工大weather'),
+          f_(url13, /l12?":"(.*?)"/g, '  南岗welife100', '  (体感)南岗welife100', 0, 1),
+          f_(url16, /[mk][pe]":(.*?),"/g, '  哈尔滨openweathermap', '  (体感)哈尔滨openweathermap', 0, 1),
+          f(url17, /m":"(.*?)"/g, '  api南岗tianqiapi'),
+          f(url18, /re":"(.*?)"/g, '  api南岗amap'),
+          f(url20, /p":"(.*?)"/g, '  api南岗duba'),
+          f(url22, /p":"(.*?)"/g, '  api南岗bj'),
+          f___(url23, /[ml][ps]":(.*?)\./g, '  南岗msn', '  (体感)南岗msn', '  (小时)南岗msn', '  (小时体感)南岗msn', 1, 0, 3, 0),
+          f(url33, /p":"(.*?)"/g, '  api南岗aa1'),
+          f_(url34, /b":"(.*?)℃/g, '  哈尔滨lenovomm', '  (小时)哈尔滨lenovomm', 4, 0),
+          f(url36, /r":"(.*?)"/g, '  哈尔滨chinaso'),
+          f__(url39, /[lp]":(-?\d{1,2}),"t/g, '  南岗moji', '  (体感)南岗moji', '  (小时体感)moji', 1, 0, 2, 0),
+          f_(url8, /"(-?\d{1,2})"/g, '  南岗qweather', '  (体感)南岗qweather', 0, 1),
+          f(url41, /m":"(.*?)\\u/g, '  (api)南岗yiketianqi'),
+          f(url42, /re":"(.*?)"/g, '  (api)哈尔滨seniverse'),
+          f(url43, /p":"(.*?)℃/g, '  (api)南岗mxnzp'),
+        ];
+        await Promise.allSettled(tasks);
+      })();
+    }
+  </script>
+</body>
+</html>
