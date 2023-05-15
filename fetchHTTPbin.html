@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <script>
+    onload = () => {
+      function fetchIt(url, param) {
+        fetch(url).then(data => data.json()).then(result => (console.log(result.args[param]), document.write(result.args[param] + "</br>")));
+      }
+      const tasks1 = [fetchIt("http://www.httpbin.org/get?aaa=111", "aaa"), fetchIt("http://www.httpbin.org/get?aaa=222", "aaa")];
+      const tasks2 = [fetchIt("http://www.httpbin.org/get?b=3", "b"), fetchIt("http://www.httpbin.org/get?b=4", "b")];
+      (async () => {
+        await Promise.allSettled(tasks1);
+        await Promise.allSettled(tasks2);
+      })();
+    }  
+  </script>
+</body>
+
+</html>
