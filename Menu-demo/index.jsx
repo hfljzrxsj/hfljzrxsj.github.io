@@ -2,24 +2,26 @@
 //显示是true，隐藏是false
 // import Menu from "./Menu.jsx";
 // import ItemMenuButton from "./ItemMenuButton.jsx";
-function ItemButton(props) {
+function ItemButton (props) {
+  const LeftRight = props.LeftRight;
+  //true 左右展开，false 左右收起
   return (
     <button onClick={props.ItemButtonClick}>上下展开/收起</button>
   )
 }
-function ItemMenuButton(props) {
+function ItemMenuButton (props) {
   return (
     <button onClick={props.ItemMenuButtonClick}>左右展开/收起</button>
   )
 }
-function Menu() {
+function Menu () {
   const [ItemFolderSelect, setItemFolderSelect] = React.useState("a");
   const [ItemSelect, setItemSelect] = React.useState("a1");
   const [LeftRight, setLeftRight] = React.useState(true);
-  function childItemSelect(params) {
+  function childItemSelect (params) {
     setItemSelect(params);
   }
-  function childItemFolderSelect(params) {
+  function childItemFolderSelect (params) {
     setItemFolderSelect(params);
   }
   return (
@@ -39,9 +41,9 @@ function Menu() {
   );
 }
 
-function ItemFolder(props) {
+function ItemFolder (props) {
   const [Updown, setUpdown] = React.useState(true);
-  function childItemSelect(params) {
+  function childItemSelect (params) {
     props.childItem(params)
     props.childItemFolder(props.id)
   }
@@ -55,12 +57,12 @@ function ItemFolder(props) {
     <Item id={props.id + "1"} IsShow={Updown} ItemSelect={props.ItemSelect} LeftRight={props.LeftRight} childItemSelect={childItemSelect}></Item>
     <Item id={props.id + "2"} IsShow={Updown} ItemSelect={props.ItemSelect} LeftRight={props.LeftRight} childItemSelect={childItemSelect}></Item>
     <Item id={props.id + "3"} IsShow={Updown} ItemSelect={props.ItemSelect} LeftRight={props.LeftRight} childItemSelect={childItemSelect}></Item>
-    <ItemButton ItemButtonClick={() => setUpdown(!Updown)}></ItemButton>
+    <ItemButton ItemButtonClick={() => setUpdown(!Updown)} LeftRight={props.LeftRight}></ItemButton>
   </div>);
 }
 
-function Item(props) {
-  function handleChange() {
+function Item (props) {
+  function handleChange () {
     props.childItemSelect(props.id)
   }
   return (
