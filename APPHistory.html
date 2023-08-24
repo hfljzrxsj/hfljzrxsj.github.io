@@ -1,0 +1,33 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <style>
+    * {
+      font-size: 120%;
+      text-align: center;
+      margin: 1q;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <input>
+  <hr><button>手机乐园</button><button>火哥分享</button><button>历趣</button>
+  <hr><button>应用汇</button><button>360手机助手</button><button>酷安</button><button>虫虫助手</button>
+  <hr><button>apkpure</button><button>apkcombo</button>
+</body>
+
+</html>
+<script>
+  const buttons = document.querySelectorAll('button');
+  const src = ['https://www.baidu.com/baidu?wd=site%3Ashouji.com.cn+', 'https://www.firepx.com/?s=', 'https://s.liqucn.com/s.php?words=', 'http://m.appchina.com/search?keyword=', 'http://zhushou.360.cn/search/index/?kw=', 'https://www.baidu.com/baidu?wd=site%3Acoolapk.com+', 'https://www.ccplay.com/search/?q=', 'https://apkpure.com/cn/search?q=', 'https://apkcombo.com/zh/search/']
+  const input = document.querySelector('input')
+  for (let i = 0; i < buttons.length; i++) {
+    buttons[i].onclick = () => {
+      window.open(src[i] + document.querySelector('input').value, '_blank')
+    }
+  }
+</script>
