@@ -1,0 +1,63 @@
+{
+  "_ahooks-SAuWP5v7.js": {
+    "file": "js/ahooks-SAuWP5v7.js",
+    "imports": [
+      "_tslib-g6pQwBLH.js",
+      "_lodash-hv2pLSqc.js"
+    ]
+  },
+  "_dayjs-5-cIlDoe.js": {
+    "file": "js/dayjs-5-cIlDoe.js"
+  },
+  "_intersection-observer-w40geAFS.js": {
+    "file": "js/intersection-observer-w40geAFS.js"
+  },
+  "_js-cookie-w40geAFS.js": {
+    "file": "js/js-cookie-w40geAFS.js"
+  },
+  "_lodash-hv2pLSqc.js": {
+    "file": "js/lodash-hv2pLSqc.js",
+    "imports": [
+      "_dayjs-5-cIlDoe.js"
+    ]
+  },
+  "_object-assign-4_VUvG2Z.js": {
+    "file": "js/object-assign-4_VUvG2Z.js"
+  },
+  "_react-ejZHSj7z.js": {
+    "file": "js/react-ejZHSj7z.js",
+    "imports": [
+      "_object-assign-4_VUvG2Z.js"
+    ]
+  },
+  "_resize-observer-polyfill-w40geAFS.js": {
+    "file": "js/resize-observer-polyfill-w40geAFS.js"
+  },
+  "_screenfull-w40geAFS.js": {
+    "file": "js/screenfull-w40geAFS.js"
+  },
+  "_tslib-g6pQwBLH.js": {
+    "file": "js/tslib-g6pQwBLH.js"
+  },
+  "index.html": {
+    "css": [
+      "css/main-OZBwzE7_.css"
+    ],
+    "file": "js/main-5B-IwwhS.js",
+    "imports": [
+      "_react-ejZHSj7z.js",
+      "_ahooks-SAuWP5v7.js",
+      "_object-assign-4_VUvG2Z.js",
+      "_tslib-g6pQwBLH.js",
+      "_lodash-hv2pLSqc.js",
+      "_dayjs-5-cIlDoe.js"
+    ],
+    "isEntry": true,
+    "src": "index.html"
+  },
+  "service-worker.ts": {
+    "file": "service-worker.js",
+    "isEntry": true,
+    "src": "service-worker.ts"
+  }
+}
